@@ -1,0 +1,14 @@
+﻿@model List<Race>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Races on map";
+
+}
+
+<img src="~/images/allerlei/map.png" alt="Worldmap" usemap="#clickmap" />
+<map name="clickmap">
+    <area shape="circle" coords="@Model[0].X,@Model[0].Y,10" alt="@Model[0].Name" href="@Url.Action("ShowRace", "Info", new {id = Model[0].RaceID})"/>
+    <area shape="circle" coords="@Model[1].X,@Model[1].Y,10" alt="@Model[1].Name" href="@Url.Action("ShowRace","Info",new { id = Model[1].RaceID})"/>
+    <area shape="circle" coords="@Model[2].X,@Model[2].Y,10" alt="@Model[2].Name" href="@Url.Action("ShowRace","Info", new {id = Model[2].RaceID})"/>
+</map>
+<a asp-controller="Home" asp-action="Menu">Back</a>
