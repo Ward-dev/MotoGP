@@ -27,6 +27,6 @@ namespace MotoGP.Data
             modelBuilder.Entity<Ticket>().ToTable("Ticket");
             modelBuilder.Entity<Race>().ToTable("Race");
         }
-        //tretredlskfjlsdkjf
+        //tretredlskfjlsdkjfmsdlkjfmsldkjdslmkjmklj
     }
 }
